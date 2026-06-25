@@ -1,4 +1,4 @@
-Verdict: Spoofed email — external attacker. Confidence: ~95%
+Verdict: Spoofed email — external attacker.
 This was never sent by Marcus Webb or from Meridian Group's infrastructure. The attacker forged the From header and routed the message through a personal Gmail account originating from Nigeria.
 
 Red flags, ranked by weight:
