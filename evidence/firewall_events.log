@@ -1,0 +1,10 @@
+2026-05-02 09:00:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
+2026-05-02 09:01:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
+2026-05-02 09:02:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
+2026-05-02 09:03:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
+2026-05-02 09:04:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
+2026-05-02 09:05:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
+2026-05-02 01:14:07 PERMIT  inbound   185.220.101.47 -> 10.0.0.1:22      rule: permit tcp any any eq 22
+2026-05-02 01:14:19 PERMIT  inbound   185.220.101.47 -> 10.0.0.1:22      rule: permit tcp any any eq 22
+2026-05-02 01:14:31 PERMIT  inbound   185.220.101.47 -> 10.0.0.1:22      rule: permit tcp any any eq 22
+2026-05-02 01:20:55 PERMIT  inbound   185.220.101.47 -> 10.0.0.1:22      rule: permit tcp any any eq 22
