@@ -1,3 +1,4 @@
+# Edge firewall permit/deny log — correlates C2 egress and SSH ingress for 185.220.101.47
 2026-05-02 09:00:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
 2026-05-02 09:01:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
 2026-05-02 09:02:05 PERMIT  outbound  10.0.0.37 -> 185.220.101.47:8443  rule: permit ip 10.0.0.0/24 any
