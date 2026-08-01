@@ -32,15 +32,4 @@ An AI-powered security & network analyst built across 8 weeks.
 | `reports/` | Auto-generated and saved incident reports |
 | `ir_runbook.md` | NIST 800-61 IR runbook + verified MITRE ATT&CK IDs |
 
-## Run locally
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-Add your Groq API key to `.streamlit/secrets.toml` (gitignored):
-
-```toml
-GROQ_API_KEY = "your-key-here"
-```
