@@ -31,6 +31,31 @@ Concise playbook aligned to **NIST SP 800-61** phases. Use checkboxes to track p
 - [ ] 2.8 Correlate findings: link C2 IP, login source IP, and encryption timeline (dwell time)
 - [ ] 2.9 Classify severity and declare incident level; notify leadership per escalation matrix
 - [ ] 2.10 Determine ransomware family if possible (note filename, extension, ransom text, IOC hashes)
+- [ ] 2.11 Map findings to [MITRE ATT&CK](https://attack.mitre.org/) using the reference table below
+
+---
+
+## MITRE ATT&CK Reference
+
+Verified technique IDs for evidence patterns in this scenario. Use these in incident reports (not guessed IDs).
+
+| Evidence pattern | Tactic | Technique | ID |
+|------------------|--------|-----------|-----|
+| Repeated FAILED LOGIN (admin, external IP) | [Credential Access](https://attack.mitre.org/tactics/TA0006/) | [Brute Force: Password Guessing](https://attack.mitre.org/techniques/T1110/001/) | **T1110.001** |
+| SUCCESS LOGIN from unusual external IP | [Initial Access](https://attack.mitre.org/tactics/TA0001/) | [Valid Accounts](https://attack.mitre.org/techniques/T1078/) | **T1078** |
+| Admin login over SSH (port 22) | [Lateral Movement](https://attack.mitre.org/tactics/TA0008/) | [Remote Services: SSH](https://attack.mitre.org/techniques/T1021/004/) | **T1021.004** |
+| C2 beacon (regular outbound, fixed interval) | [Command and Control](https://attack.mitre.org/tactics/TA0011/) | [Application Layer Protocol: Web Protocols](https://attack.mitre.org/techniques/T1071/001/) | **T1071.001** |
+| C2 traffic on non-standard port (e.g. 8443) | [Command and Control](https://attack.mitre.org/tactics/TA0011/) | [Non-Standard Port](https://attack.mitre.org/techniques/T1571/) | **T1571** |
+| Mass file rename to `.locked` | [Impact](https://attack.mitre.org/tactics/TA0040/) | [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486/) | **T1486** |
+| Ransom note created (`READ_ME*`) | [Impact](https://attack.mitre.org/tactics/TA0040/) | [Data Encrypted for Impact](https://attack.mitre.org/techniques/T1486/) | **T1486** |
+
+**Common mis-mappings to avoid**
+
+| Incorrect ID | Actually is | Correct ID |
+|--------------|-------------|------------|
+| T1071.001 for brute-force login | Application Layer Protocol (C2), not credential attacks | **T1110.001** |
+| T1210.002 for file encryption | Exploitation of Remote Services, not ransomware | **T1486** |
+| T1019.001 for beaconing | System Firmware, not network C2 | **T1071.001** / **T1571** |
 
 ---
 
@@ -85,4 +110,4 @@ Concise playbook aligned to **NIST SP 800-61** phases. Use checkboxes to track p
 
 ---
 
-*Version 1.0 — Ransomware IR Runbook (NIST 800-61)*
+*Version 1.1 — Ransomware IR Runbook (NIST 800-61 + MITRE ATT&CK)*
