@@ -45,6 +45,9 @@ Upload `evidence/security_events_2026-06-12.log` and ask: *Summarize the SRV-RDP
 ### Automated pipeline
 Runs an automated triage pipeline (GitHub Actions + Ollama `llama3.2:3b`) that reads `evidence/` and `ir_runbook.md`, maps findings to MITRE ATT&CK with confidence scores, and commits a timestamped report to `reports/`.
 
+### Complete loop automation
+Runs automated triage loop through app.py on Web API using Docker to automatically write and read from the github repository.
+
 ---
 
 ## Evidence & samples
