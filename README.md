@@ -21,6 +21,7 @@ An AI-powered security & network analyst built across 8 weeks.
 - **Week 5:** Runs an automated triage pipeline (GitHub Actions + Ollama) that reads the IR runbook, maps findings to MITRE ATT&CK, and writes a verified incident report
 - **Week 6:** Sample evidence sets (`samples/`) for multi-source correlation exercises (WIN-FIN-07)
 - **Week 7:** Streamlit SOC Copilot (`app.py`) — hosted Groq correlation, chat, and case-file browser
+- **Week 8:** It Runs itself, integrated app.py into a docker container to autonomously loop evidence into reports.
 
 ## Repo layout
 
